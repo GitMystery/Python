@@ -6,10 +6,16 @@ import random
 mas=[]
 n = int(input('Введите n количество монеток: '))
 k=0
+l=0
 for i in range(n):
     mas.append(random.randint(0, 1))
     if (mas[i]==0):
         k+=1
+    else:
+        l+=1
 print (f'Исходный массив: {mas}')
-print (f'Количество монет, которые нужно перевернуть: {k}')
+if k<l:
+    print (f'Количество монет, которые нужно перевернуть: {k}')
+else:
+    print (f'Количество монет, которые нужно перевернуть: {l}')
     
